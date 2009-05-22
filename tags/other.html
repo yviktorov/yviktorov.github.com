@@ -1,0 +1,9 @@
+---
+layout: default
+title: Other posts
+full_posts: 5
+---
+
+{% for post in site.categories.other %}
+    {% include posts-list.html %}
+{% endfor %}

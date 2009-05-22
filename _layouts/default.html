@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>
+{% if page.title %}
+ {{ page.title }} :: 
+{% endif %}
+Yevgeniy Viktorov's blog
+</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Yevgeniy A. Viktorov" />
+
+<link href="/css/main.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="/css/patches/patch_main_layout.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+<body>
+  <div id="page_margins">
+    <div id="page">
+      <div id="header">
+        <div id="topnav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div id="main">
+        <div id="col1">
+          <div id="col1_content" class="clearfix">
+
+{% if page.title %}
+ <h1>{{ page.title }}</h1>
+{% endif %}
+
+{{ content }}
+
+          </div>
+        </div>
+        <div id="col3">
+          <div id="col3_content" class="clearfix">
+
+            <div id="sidebar">
+                <div id="feed">
+                    <a class="feed-button" href="#">&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="/tags/other.html">other</a></li>
+                </ul>
+
+                <div style="text-align:center;padding:10px 0px 0px 5px;">
+                    <script src="http://www.ohloh.net/stacks/41368/widgets/stack_normal?icon_width=16&icon_height=16&title=PHP&width=170&projects_shown=22&noclear=true" type="text/javascript"></script><br/>
+                    <script src="https://www.ohloh.net/stacks/42410/widgets/stack_normal?icon_width=16&icon_height=16&title=Desktop&width=170&projects_shown=20&noclear=true" type="text/javascript"></script>
+                </div>
+
+                <div id="sidebar-bottom">
+                    &nbsp;
+                </div>
+            </div>
+          </div>
+          <!-- IE Column Clearing -->
+          <div id="ie_clearing"> &#160; </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- begin: #footer -->
+<div id="footer">
+    <div class="copyright">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;position:relative;top:4px;" src="http://creativecommons.org/images/public/somerights20.png" /></a>
+    </div>
+
+    <div class="developer">
+        Layout based on <a href="http://www.yaml.de/"><img src="http://yaml.de/fileadmin/img/yaml_base.gif" alt="based on YAML" style="position: relative; top: 5px;" border="0" /></a>
+    </div>
+</div>
+<!-- end: #footer -->
+<div id="footer_bg">&nbsp;</div>
+
+{% include google-analytics.html %}
+
+</body>
+</html>

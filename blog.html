@@ -1,0 +1,10 @@
+---
+layout: default
+title: Blog
+full_posts: 5
+---
+
+{% for post in site.posts %}
+    {% include posts-list.html %}
+{% endfor %}
+

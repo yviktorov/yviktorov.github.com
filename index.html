@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<h1>Latest Blog Post <span class="more">(<a href='/blog.html'>More</a>)</span></h1>
+<div class="entry">
+    <div class="entry-title"><a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a></div>
+    <div class="date">Posted on {{site.posts.first.date | date_to_string}}</div>
+    <p>{{ site.posts.first.content }}</p>
+    <div class="comments"><a href="{{site.posts.first.url}}#disqus_thread">Comments</a></div>
+</div>
+
+<h3>Tweets</h3>
+<div id="tweets">
+ <p>Please wait while my tweets load <img src="/images/indicator.gif" /></p>
+ <p><a href="http://twitter.com/yviktorov">If you can't wait - check out what I've been twittering</a></p>
+</div>
+
+<script type="text/javascript" src="/js/twitter-1.12.2.min.js"></script>
+
+<script type="text/javascript">
+getTwitters('tweets', {
+  id: 'yviktorov',
+  count: 5,
+  enableLinks: true,
+  clearContents: true,
+  template: '%text%'
+});
+</script>

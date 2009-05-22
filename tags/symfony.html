@@ -1,0 +1,9 @@
+---
+layout: default
+title: Symfony related posts
+full_posts: 5
+---
+
+{% for post in site.categories.symfony %}
+    {% include posts-list.html %}
+{% endfor %}

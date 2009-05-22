@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+ * (en) stylesheet for screen layout
+ * (de) Stylesheet für das Bildschirm-Layout
+ *
+ * @creator     YAML Builder V1.0.2b (http://builder.yaml.de)
+ * @file        basemod.css
+ */
+
+@media screen, projection
+{
+  /*-------------------------------------------------------------------------*/
+
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */
+  body, html {height: 100% !important;}
+  body { background: #fff url(../../images/bg-menu.png)  center top repeat-x;}
+
+  /* Layout Alignment | Layout-Ausrichtung */
+  #page_margins {
+  margin: 0 auto;
+  position:relative !important;
+  min-height:100%; /* real browsers */
+  height:auto !important;
+  }
+
+  /* Layout Properties | Layout-Eigenschaften */
+  #page_margins { width: auto;  min-width: 865px; max-width: 865px; }
+  #page { padding: 0px; padding-bottom:35px}
+  #header { padding: 0px; margin: 0px; width:100%; height:35px; color: #000;}
+
+  #header #topnav { height:35px; line-height:35px; padding:0px 10px; top:0px; left:10px;}
+  #header #topnav ul {list-style:none}
+  #header #topnav ul li {float:left}
+  #header #topnav a {
+    line-height: 35px;
+	padding:0 15px;
+	display:block;
+	color:#ffffff;
+	margin-right:2px;
+  }
+
+  #header #topnav a:hover {
+      text-decoration: none;
+      background:url(../../images/bg-menu-hover.png) no-repeat center center;
+  }
+
+/* Sidebar */
+#sidebar {
+	float:right;
+	width:180px;
+	background:#efefef;
+	margin-right:10px;
+	}
+
+#sidebar ul {
+	list-style-type:none;
+    margin: 10px 0px 0px 0px;
+	}
+#sidebar li {
+    margin-left:0px;
+	}
+#sidebar li a {
+	display:block;
+	height:20px;
+	line-height:20px;
+	color:#222222;
+	padding-left:5px;
+	border-bottom:1px solid #dddddd;
+	}
+#sidebar li a:hover {
+	background:#edebed;
+	color:#6CC4D8;
+    text-decoration: none;
+	}
+#sidebar-bottom {
+	height:20px;
+	background:url(../../images/bg-sidebar-bottom.gif) no-repeat top center;
+	}
+
+/* Feed */
+
+#feed {
+	height:25px;
+	width:126px;
+	background:url(../../images/bg-feed.gif) no-repeat;
+	margin:0 auto;
+	padding-left:26px;
+	}
+a.feed-button {
+	display:block;
+    width:100px;
+    height:25px;
+    background:url("../../images/button-feed.png") 0 0 no-repeat;
+    text-decoration: none;
+	}
+a:hover.feed-button {
+	background-position:0 -25px;
+    text-decoration: none;
+	}
+
+  #main { margin: 0px;padding:0px;padding-bottom:15px; background: #fff;}
+
+  #footer {position:relative !important; display:block; width:865px;margin:-35px auto; height:35px; line-height:35px; padding: 0px; color:#6ac20b; background: #2d2b2c; border-top: none; text-align:center;}
+  #footer_bg {width:100%; height:35px;margin-top:-35px;background: #2d2b2c;}
+
+  #footer .developer {color: rgb(102, 102, 102); float:right; margin-right:7px;position:relative; z-index:10; font-size:133.33%}
+
+  #footer .copyright {color: rgb(102, 102, 102);float:left;padding-left:10px;position:relative}
+  /* (en) navigation: horizontal adjustment | (de) horizontale Ausrichtung  */
+  #nav ul { margin-left: 20px; }
+
+  /*-------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   */
+
+  #col1 {  float: left;width: 685px; }
+  #col2 { display:none}
+  #col3 { width:180px;margin-left:685px;}
+  #col1_content { padding: 15px 35px 0 35px; }
+  #col3_content { padding: 0px 20px 0 20px; z-index:0 }
+
+  /*-------------------------------------------------------------------------*/
+}
