@@ -45,15 +45,15 @@
   }
 
   h1,h2,h3,h4,h5,h6 { font-weight:normal; margin: 0 0 0.25em 0; color:#69c309}
-  h1 { font-size: 200% }                        /* 24px */
-  h2 { font-size: 250% }                     /* 30px */
-  h3 { font-size: 150% }                        /* 18px */
-  h4 { font-size: 133.33% }                     /* 16px */
-  h5 { font-size: 116.67% }                     /* 14px */
-  h6 { font-size: 116.67%; font-style:italic; } /* 14px */
-  h2 .pageTitle {text-transform:uppercase;}
-  p { line-height: 1.5em; margin: 0 0 1em 0; }
-  h5.error {color:#cc0000}
+
+  h1 { font-size: 250%; }                       /* 30px */
+  h2 { font-size: 200%; }                       /* 24px */
+  h3 { font-size: 150%; }                       /* 18px */
+  h4 { font-size: 133.33%; }                    /* 16px */
+  h5 { font-size: 116.67%; }                    /* 14px */
+  h6 { font-size: 116.67%; }                    /* 14px */
+  /*p { line-height: 1.5em; margin: 0 0 1em 0; }*/
+
   /* ### Lists | Listen  #### */
 
   ul, ol, dl { line-height: 1.5em; margin: 0 0 1em 1em; }
@@ -62,20 +62,41 @@
   dt { font-weight: bold; }
   dd { margin: 0 0 1em 2em; }
 
-  /* ### text formatting | Textauszeichnung ### */
+  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
 
-  cite, blockquote { font-style:italic; }
-  blockquote { margin: 0 0 1em 1.5em; }
+  p { line-height: 1.5em; margin: 0 0 1em 0; }
+
+  blockquote, cite,q {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style:italic;
+  }
+  blockquote { margin: 0 0 1em 1.6em; color: #666; }
 
   strong,b { font-weight: bold; }
-  em,i { font-style:italic; }
+  em,i { font-style: italic; }
 
-  pre, code { font-family: monospace; font-size: 1.1em; }
+  pre, code, kbd, tt, samp, var { font-size: 100%; }
+  pre, code { color: #800; }
+  pre { line-height: 1.5em; margin: 0 0 1em 0; }
+  kbd, samp, var { color: #666; }
+  var { font-style: italic; }
 
   acronym, abbr {
+    border-bottom: 1px #aaa dotted;
+    font-variant: small-caps;
     letter-spacing: .07em;
-    border-bottom: .1em dashed #c00;
     cursor: help;
+  }
+
+  sub, sup { font-size: 91.6667%; }
+
+  hr {
+    color: #fff;
+    background:transparent;
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0.5em 0;
+    border:0;
+    border-bottom: 1px #eee solid;
   }
 
   /**
