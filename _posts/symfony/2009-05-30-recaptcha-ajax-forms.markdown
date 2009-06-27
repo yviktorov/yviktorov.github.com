@@ -2,6 +2,8 @@
 layout: post
 title: Using sfWidgetFormReCaptcha with ajax enabled forms
 categories: [symfony]
+keywords: [symfony, recaptcha, ajax]
+description: In this post I wold like to make a note about usage of sfWidgetFormReCaptcha with ajax enabled forms.
 ---
 
 In this post I wold like to make a note about usage of [sfWidgetFormReCaptcha][1] with ajax enabled forms.
@@ -53,7 +55,7 @@ class sfWidgetFormReCaptcha2 extends sfWidgetFormReCaptcha
 
 ### Step 2. Modify your form class
 
-Modify your form class as follow, e.g. simply replace `sfWidgetFormReCaptcha` to `sfWidgetFormReCaptcha2` 
+Modify your form class as follow, e.g. simply replace `sfWidgetFormReCaptcha` to `sfWidgetFormReCaptcha2`
 
 {% highlight php %}
 <?php
