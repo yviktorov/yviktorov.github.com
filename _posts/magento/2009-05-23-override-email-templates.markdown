@@ -2,6 +2,8 @@
 layout: post
 title: How to override email templates in Magento
 categories: [magento]
+keywords: [magento, email, templates]
+description: In this post I would like to share the idea of overriding default email templates in  a programmatic way and on per design basis in Magento - opensource eCommerce.
 ---
 
 In this post I would like to share the idea of overriding default email templates in  a **programmatic** way and on per design basis. So, you can copy email templates from `app/locale/en_US/template/email` to `app/design/frontend/<yourInterface>/default/locale/en_US/template/email` and modify them as you like.
