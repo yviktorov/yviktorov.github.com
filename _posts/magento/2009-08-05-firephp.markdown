@@ -10,7 +10,7 @@ The good example of [FirePHP][2] usage in Magento has been introduced by [Active
 
 ## FirePhp wrapper
 
-Create `Firephp.php` file in `lib/Tinycarts/Debug`, or checkout(or download) it from github: [Tinycarts_libs][6].
+Create `Firephp.php` file in `lib/Tinycarts/Debug`, or checkout(or download) it from github [Tinycarts_libs][6].
 
 {% highlight php %}
 <?php
