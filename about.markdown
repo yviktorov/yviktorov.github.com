@@ -9,5 +9,8 @@ Coming soon... :)
 
 ### About This Site
 
-This site is built using the [Jekyll](http://github.com/mojombo/jekyll) library and hosted on [GitHub](http://github.com/). The source code used to create this library is [publicly available on GitHub](http://github.com/yviktorov/yviktorov.github.com) as well.
+This site is built using the [Jekyll][1] library and hosted on [GitHub][2]. The source code used to create this library is [publicly available on GitHub][3] as well.
 
+[1]: http://jekyllrb.com/
+[2]: http://github.com/
+[3]: http://github.com/yviktorov/yviktorov.github.com
