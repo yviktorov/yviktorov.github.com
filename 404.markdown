@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: missunderstood
 title: "404: Page not found!"
 hide_meta: true
 ---
