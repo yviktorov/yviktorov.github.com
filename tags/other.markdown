@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Other posts
+layout: missunderstood
+title: Others posts
 ---
 
 {% for post in site.categories.other %}
