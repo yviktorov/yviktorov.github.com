@@ -1,0 +1,29 @@
+<div id='github-projects'>
+ <p>Please wait while my projects load <img src="/images/indicator.gif" /></p>
+ <p><a href="http://github.com/yviktorov">If you can't wait - check out my projects at github</a></p>
+</div>
+
+<script src="/js/jquery.js" type="text/javascript" charset="utf-8">
+</script>
+
+<script src="/js/jquery.github.js" type="text/javascript" charset="utf-8">
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  $.githubUser('yviktorov', function(data) {
+    $('#github-projects').html('');
+
+    var repos = data.user.repositories;
+    repos.sort(function(a,b) {
+      return b.watchers - a.watchers;
+    });
+
+    $(repos).each(function() {
+      $('#github-projects').append("\
+<div class='entry'>\
+<div class='entry-title'><a href='" + this.url + "'>" + this.name + "</a></div>\
+<p>"+this.description+"</p>\
+</div>");
+    });
+  });
+</script>
