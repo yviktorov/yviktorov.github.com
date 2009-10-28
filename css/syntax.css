@@ -57,3 +57,4 @@
 .vg { color: #19177C } /* Name.Variable.Global */
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
+span.lineno {background-color: #ececec; border-right: 1px solid #ddd; padding: 0 5px 0 5px;}
