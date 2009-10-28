@@ -2,8 +2,7 @@
 layout: post
 title: Using FirePHP with Magento
 categories: [magento]
-keywords: [magento, firephp, firebug, zend]
-description: using FirePHP with Magento
+truncatewords: 44 
 ---
 
 The good example of [FirePHP][2] usage in Magento has been introduced by [ActiveCodeline][3] in his post [Utilize FireBug (and FirePHP) to speed up Magento development][4] early this year. Here I would like to show you another place you can utilize that function in :)
@@ -12,7 +11,7 @@ The good example of [FirePHP][2] usage in Magento has been introduced by [Active
 
 Create `Firephp.php` file in `lib/Tinycarts/Debug`, or checkout(or download) it from github [TinycartsLibs][6].
 
-{% highlight php %}
+{% highlight php linenos  %}
 <?php
 /**
  * Magento

@@ -2,8 +2,7 @@
 layout: post
 title: Using sfWidgetFormReCaptcha with ajax enabled forms
 categories: [symfony]
-keywords: [symfony, recaptcha, ajax]
-description: In this post I wold like to make a note about usage of sfWidgetFormReCaptcha with ajax enabled forms.
+truncatewords: 18
 ---
 
 In this post I wold like to make a note about usage of [sfWidgetFormReCaptcha][1] with ajax enabled forms.
