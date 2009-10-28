@@ -1,7 +1,7 @@
-{% if forloop.first %}
-<ul class='posts'>
+
+<h3 class="posts">&rsaquo;&nbsp;{{ post.title }}</h3>
+<div class="date">Posted on {{ post.date | date_to_string }}</div>
+{% if post.content and post.truncatewords  %}
+{{ post.content | strip_html | truncatewords:post.truncatewords }}
 {% endif %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-{% if forloop.last %}
-</ul>
-{% endif %}
+&raquo; <a href="{{ post.url }}">Read More</a><br/>
