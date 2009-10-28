@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>{% if page.title %}{{ page.title }} :: {% endif %}Yevgeniy Viktorov's blog</title>
+<meta name="title" content="{% if page.title %}{{ page.title }}{% else %}Yevgeniy Viktorov's blog{% endif %}" />
+{% if page.categories %}<meta name="keywords" content="{{ page.categories | array_to_sentence_string }}" />{% endif %}
+{% if page.content and page.truncatewords  %}
+<meta name="description" content="{{ page.content | strip_html | truncatewords:page.truncatewords }}" />
+{% elsif page.description  %}
+<meta name="description" content="{{ page.description }}" />
+{% endif %}
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en" />
+
+<meta name="author" content="Yevgeniy A. Viktorov" />
+<meta name="verify-v1" content="AvGJF0A/6q+WVf/720gbEqqjdT1Ippa5F8djfUQ4t6M=" />
+<link href="http://feeds2.feedburner.com/wik" rel="alternate" title="Yevgeniy Viktorov" type="application/atom+xml" />
+
+<link href="/css/missunderstood_layout.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="css/patches/patch_misunderstood_layout.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link href="/css/syntax.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+<body>
+  <div class="page_margins">
+    <div id="topnav">
+      <!-- start: skip link navigation -->
+      <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
+      <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
+      <!-- end: skip link navigation --><a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/projects.html">Projects</a>
+    </div>
+    <!-- start: skip link navigation -->
+    <!-- end: skip link navigation -->
+    <!-- start: skip link navigation -->
+    <!-- end: skip link navigation -->
+    <!-- start: skip link navigation -->
+    <!-- end: skip link navigation -->
+    <div id="main">
+      <div id="col1">
+        <div id="col1_content" class="clearfix">
+
+{% if page.title %}
+ <h1>{{ page.title }}</h1>
+{% endif %}
+
+{{ content }}
+
+        </div>
+      </div>
+      <div id="col3">
+        <div id="col3_content" class="clearfix">
+          <div id="navlist">
+            <ul>
+            <li><a href="/tags/magento.html">magento</a></li>
+            <li><a href="/tags/symfony.html">symfony</a></li>
+            <li><a href="/tags/other.html">other</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- IE Column Clearing -->
+        <div id="ie_clearing"> &#160; </div>
+      </div>
+    </div>
+  </div>
+
+{% include google-analytics.html %}
+
+</body>
+</html>
+
