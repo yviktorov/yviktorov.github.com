@@ -19,49 +19,15 @@ Remove `recaptcha_ajax.js` inclusion from widget and put into header of your pag
 
 We will be creating `sfWidgetFormReCaptcha2.class.php` file which simply extends original `sfWidgetFormReCaptcha` and overrides `render(...)` method. You can put into `apps/frontend/lib/widget/`.
 
-{% highlight php %}
-<?php
-
-class sfWidgetFormReCaptcha2 extends sfWidgetFormReCaptcha
-{
-  /**
-   * @see sfWidgetFormReCaptcha
-   */
-  public function render($name, $value = null, $attributes = array(), $errors = array())
-  {
-    $server = $this->getServerUrl();
-    $key = $this->getOption('public_key');
-
-    return sprintf('
-    <div id="recaptcha_div"></div>
-
-    <script type="text/javascript">
-    Recaptcha.create("%s",
-      "recaptcha_div", {
-         theme: "red",
-         callback: Recaptcha.focus_response_field
-      });
-    </script>
-    <noscript>
-      <iframe src="%s/noscript?k=%s" height="300" width="500" frameborder="0"></iframe><br />
-      <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
-      <input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
-    </noscript>
-    ', $key, $server, $key);
-  }
-}
-{% endhighlight %}
+<script src="http://gist.github.com/369216.js">
+</script>
 
 ### Step 2. Modify your form class
 
-Modify your form class as follow, e.g. simply replace `sfWidgetFormReCaptcha` to `sfWidgetFormReCaptcha2`
+Modify your form class and add following, e.g. simply replace `sfWidgetFormReCaptcha` to `sfWidgetFormReCaptcha2`
 
-{% highlight php %}
-<?php
-    $this->widgetSchema['captcha'] = new sfWidgetFormReCaptcha2(array(
-      'public_key' => sfConfig::get('app_recaptcha_public_key')
-    ));
-{% endhighlight %}
+<script src="http://gist.github.com/369218.js">
+</script>
 
 **NOTE:** The usage of ReCaptcha widget and validator explained [here][4]
 
@@ -69,9 +35,8 @@ Modify your form class as follow, e.g. simply replace `sfWidgetFormReCaptcha` to
 
 For example, put into your template ;)
 
-{% highlight php %}
-<?php use_javascript('http://api.recaptcha.net/js/recaptcha_ajax.js') ?>
-{% endhighlight %}
+<script src="http://gist.github.com/369219.js">
+</script>
 
 **NOTE:** Above template must be processed with regular(non ajax) response at least once, i.e. first time page requested!
 
