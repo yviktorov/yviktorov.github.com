@@ -5,27 +5,43 @@ categories: [magento]
 truncatewords: 44
 ---
 
-The good example of [FirePHP][2] usage in Magento has been introduced by [ActiveCodeline][3] in his post [Utilize FireBug (and FirePHP) to speed up Magento development][4] early this year. Here I would like to show you another place you can utilize that function in :)
+The good example of [FirePHP][] usage in Magento has been introduced by [ActiveCodeline][] in his post [Utilize FireBug (and FirePHP) to speed up Magento development][] early this year. Here I would like to show you another place you can utilize that function in :)
+
+**UPDATE:** the FirePHP wrapper class now available as a magento extension though [tinycarts channel][], simply proceed with the following commands under the top directory of your magento instance:
+
+ * `./pear channel-discover tinycarts.github.com`
+ * `./pear install tinycarts/Lib_Tinycarts_Debug`
+
+And skip to **usage** example.
 
 ## FirePhp wrapper
 
-Create `Firephp.php` file in `lib/Tinycarts/Debug`, or checkout(or download) it from github [TinycartsLibs][6].
+Create `Firephp.php` file in `lib/Tinycarts/Debug`, or checkout(or download) it from github [TinycartsLibs][].
 
 <script src="http://gist.github.com/369222.js">
 </script>
 
-The static `send()` method it's exact copy of `acl()` function introduced by [ActiveCodeline][3].
+The static `send()` method it's exact copy of `acl()` function introduced by [ActiveCodeline][].
 
-So, now, all you need to do is to go into one of your template files like `/catalog/product/view.phtml` and call this function like:
+## Usage
+
+Go into one of your template files like `/catalog/product/view.phtml` and call this function like:
 
 <script src="http://gist.github.com/369224.js">
 </script>
 
-**NOTE**: to let it send debug messages you have to uncomment `Mage::setIsDeveloperMode(true);` in your index.php *in development environment ONLY!!!*. Next time I'll tell you how to split environment and do not bother index.php at all ;)
+**NOTE:** to let it send debug messages you have to uncomment `Mage::setIsDeveloperMode(true);` in your index.php *in development environment ONLY!!!*. Next time I'll tell you how to split environment and do not bother index.php at all ;)
 
-[1]: http://getfirebug.com/
-[2]: http://www.firephp.org/
-[3]: http://activecodeline.com/
-[4]: http://activecodeline.com/utilize-firebug-and-firephp-to-speed-up-magento-development/
-[5]: http://github.com/
-[6]: http://github.com/yviktorov/tinycarts_libs/tree/master
+**UPDATE:** sinse 1.4 release developer mode can be enabled by defining special environment variable `MAGE_IS_DEVELOPER_MODE` at your development machine, see [configure_magento_error_page][].
+
+[FirePHP]: http://www.firephp.org/
+  "FirePHP - Firebug Extension for AJAX Development"
+[ActiveCodeline]: http://activecodeline.com/
+  "blog site of branko ajzele, senior developer / project manager"
+[TinycartsLibs]: http://github.com/yviktorov/tinycarts_libs/tree/master
+  "Additional collection of php classes for magento - ecommerce platform"
+[tinycarts channel]: http://tinycarts.github.com/
+  "Tinycarts PEAR channel"
+[configure_magento_error_page]: http://www.magentocommerce.com/wiki/fix/configure_magento_error_page
+  "Configure Magento error page"
+[Utilize FireBug (and FirePHP) to speed up Magento development]: http://activecodeline.com/utilize-firebug-and-firephp-to-speed-up-magento-development/
