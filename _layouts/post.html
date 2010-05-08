@@ -5,11 +5,13 @@ layout: missunderstood
 <div class="entry">
     <div class="date">Posted on {{page.date | date_to_string}}</div>
     <div>{{ content }}</div>
-    <script>
-    var idcomments_acct = '1e35482bdea9f5f63b4a6e9a639c888f';
-    var idcomments_post_id;
-    var idcomments_post_url;
-    </script>
-    <span id="IDCommentsPostTitle" style="display:none"></span>
-    <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    <div id="comments">
+      <script>
+      var idcomments_acct = '1e35482bdea9f5f63b4a6e9a639c888f';
+      var idcomments_post_id;
+      var idcomments_post_url;
+      </script>
+      <span id="IDCommentsPostTitle" style="display:none"></span>
+      <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+  </div>
 </div>
