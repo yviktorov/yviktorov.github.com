@@ -188,7 +188,7 @@
 
   #col1_content a:focus,
   #col1_content a:hover,
-  #col1_content a:active { color:#fff; background: #D01A71; font-weight: bold; }
+  #col1_content a:active { color:#fff; background-color:#D01A71; font-weight: bold; }
 
   #topnav a { color: #666;}
   #topnav a:focus,
