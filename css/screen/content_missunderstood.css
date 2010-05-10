@@ -153,7 +153,9 @@
   /*pre { line-height: 1.5em; margin: 0 0 1em 0; }*/
   pre {
     border-left: 4px solid #ccc;
-   /* margin: 0 0 1em 0;*/
+    margin: 0 0 1em 0;
+	  background-color: #333;
+    width: 100%;
   }
   kbd, samp, var { color: #666; }
   var { font-style: italic; }
