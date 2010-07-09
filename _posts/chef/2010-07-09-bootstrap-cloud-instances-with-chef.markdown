@@ -13,7 +13,7 @@ If shortly, this is about provisioning [Chef Client][] ready server on [Rackspac
 
  * [Rackspace Cloud][] account
  * [Opscode][] account
- * Follow [Opscode quick start guide][] instructions first
+ * Follow [Opscode quick start guide][] first
 
 ## Sharpening Knife for the cloud
 
