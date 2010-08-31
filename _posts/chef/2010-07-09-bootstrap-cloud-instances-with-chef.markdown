@@ -48,12 +48,13 @@ Ok, Knife is sharp now, cookbook opened on the right page, let's bootstrap clien
 > Yes, [Chef Client][] will be running as persistent daemon in order
 > to "talk" to [Opscode][] server periodically(about 30 minutes).
 
-Create `~/chef-repo/roles/chef4test.rb` file with the following:
+Create `~/chef-repo/roles/chef4test.rb` file with the following,
+replacing **ORGNAME** with your organization's simple string name:
 
     name "chef4test"
     description "Bootstraping chef node"
     run_list("recipe[chef::bootstrap_client]")
-    default_attributes "chef" => { "server_url" => "https://api.opscode.com/organizations/jeyla" }
+    default_attributes "chef" => { "server_url" => "https://api.opscode.com/organizations/ORGNAME" }
 
 And throw the following commands:
 
