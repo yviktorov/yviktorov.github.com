@@ -5,9 +5,17 @@ categories: [chef]
 truncatewords: 45
 ---
 
-I was looking for cloud automation approaches and come up with some interesting pragmatic solution.
+I was looking for cloud automation approaches and come up with some
+interesting pragmatic solution.
 
-If shortly, this is about provisioning [Chef Client][] ready server on [Rackspace Cloud][] services with a single command. We also will be using [Opscode][] instead of our own [Chef Server][].
+If shortly, this is about provisioning [Chef Client][] ready server on
+[Rackspace Cloud][] services with a single command. We also will be
+using [Opscode][] instead of our own [Chef Server][].
+
+**UPDATE(31 Aug 2010):** forgot to mention `server_url` attribute
+  which are important for future findings of chef server, i.e. [Opscode][]
+  server in our case. See **Bootstrap Rackspace Cloud server with
+  chef-client daemon** section.
 
 ## Pre-requirements
 
@@ -31,19 +39,32 @@ So, let's tweak [Knife][] configuration to let it interact with a [Rackspace Clo
 Preparing necessary cookbooks([Chef Cookbook][] with dependencies) and pushing them to the [Opscode][] server:
 
     knife cookbook site vendor chef --dependencies
-    knife cookbook upload --all
+    rake upload_cookbooks
 
 Ok, Knife is sharp now, cookbook opened on the right page, let's bootstrap client ;)
 
 ## Bootstrap Rackspace Cloud server with chef-client daemon
 
-> Yes, [Chef Client][] will be running as persistent daemon in order to "talk" to [Opscode][] server periodically.
+> Yes, [Chef Client][] will be running as persistent daemon in order
+> to "talk" to [Opscode][] server periodically(about 30 minutes).
+
+Create `~/chef-repo/roles/chef4test.rb` file with the following:
+
+    name "chef4test"
+    description "Bootstraping chef node"
+    run_list("recipe[chef::bootstrap_client]")
+    default_attributes "chef" => { "server_url" => "https://api.opscode.com/organizations/jeyla" }
+
+And throw the following commands:
 
     cd ~/chef-repo
-    knife rackspace server create 'recipe[chef::bootstrap_client]' --server-name chef4test --image 49 --flavor 2
+    rake roles
+    knife rackspace server create 'role[chef4test]' --server-name chef4test --image 49 --flavor 2
 
  * image 49 it's Ubuntu 10.04 LTS (Lucid Lynx);
  * flavor it's a server size, i.e. 512MB RAM with 20GB disk for $0.03 per hour in this case.
+
+> And image 4 it's Debian 5.0 (Lenny) if you interested ;)
 
 Now wait a little and check [Opscode Console][] when [Knife][] complete.
 
