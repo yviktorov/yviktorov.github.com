@@ -5,7 +5,7 @@ categories: [other]
 truncatewords: 14
 ---
 
-Dear friends, some time ago I made a decision to switching my blogging toolkit, you can read more on the [my new blog](http://yeevgen.github.com/). And I'll keep this blog as is for historical purposes.
+Dear friends, some time ago I made a decision to switching my blogging toolkit, you can read more on the [my new blog](http://yevgenko.me/). And I'll keep this blog as is for historical purposes.
 
 Sorry for any inconvenience caused.
 
